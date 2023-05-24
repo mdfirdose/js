@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment-1</title>
+    <style>
+        h1 {
+            background-color: hotpink;
+            text-align: center;
+            text-transform: capitalize;
+        }
+    </style>
+    <script>
+
+
+        // que-1
+        var str1 = 'Today is';
+        var str2 = '      a beautiful day     '
+        var str3 = ' In Hawaii.     '
+        // Result = 'Today is a beautiful day In Hawaii.'
+        var result = `${str1} ${str2.trim()} ${str3.trim()}`
+        console.log(result)
+
+
+        // que-2
+        var enteredAlphabet = "d or D"
+        switch (enteredAlphabet) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U':
+                console.log('This is vowel');
+                break;
+            default:
+                console.log('This is consonant');
+        }
+
+
+        //que-3
+        const a = +prompt("enter first value")
+        const o = prompt("enter operator")
+        const b = +prompt("enter sceond value")
+
+        switch (o) {
+            case "+":
+                console.log(a + b);
+                break;
+            case "-":
+                console.log(a - b);
+                break;
+            case "*":
+                console.log(a * b);
+                break;
+            case "/":
+                console.log(a / b);
+                break;
+        }
+
+
+
+
+
+        // //que-4
+        var s1 = window.prompt("Enter first side of a triangle")
+        var s2 = window.prompt("Enter second side of a triangle")
+        var s3 = window.prompt("Enter third side of a triangle")
+        if (s1 == s2 && s2 == s3)
+            console.log("Equilateral Triangle");
+        else if (s1 == s2 || s2 == s3 || s3 == s1)
+            console.log("Isosceles Triangle");
+        else console.log("Scalene Triangle");
+
+        // Question 5:
+        let totalUnits = 300
+
+        let bill;
+
+        if (totalUnits <= 50) {
+            bill = totalUnits * 0.5
+        } else if (totalUnits > 50 && totalUnits <= 150) {
+            bill = 50 * 0.5 + (totalUnits - 50) * 0.75
+        } else if (totalUnits > 150 && totalUnits <= 250) {
+            bill = 50 * 0.5 + 100 * 0.75 + (totalUnits - 150) * 1.2
+        } else {
+            bill = 50 * 0.5 + 100 * 0.75 + 100 * 1.2 + (totalUnits - 250) * 1.5
+            bill += bill * 0.2
+        }
+        console.log("bill", bill)
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1>javascript assignment-1</h1>
+
+</body>
+
+</html>
